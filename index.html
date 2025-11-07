@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taslim | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+      }
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          },
+          colors: {
+            'navy': '#0a192f',
+            'light-navy': '#112240',
+            'lightest-navy': '#233554',
+            'slate': '#8892b0',
+            'light-slate': '#a8b2d1',
+            'lightest-slate': '#ccd6f6',
+            'green': '#64ffda',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .fade-in-up { animation: fade-in-up 0.5s forwards; opacity: 0; }
+    .fade-in-up-delay-1 { animation-delay: 100ms; }
+    .fade-in-up-delay-2 { animation-delay: 200ms; }
+    .fade-in-up-delay-3 { animation-delay: 300ms; }
+    .fade-in-up-delay-4 { animation-delay: 400ms; }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .chat-widget-enter { animation: slide-in-fade-in 0.3s forwards; }
+    @keyframes slide-in-fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-navy">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
